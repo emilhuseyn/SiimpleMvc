@@ -1,0 +1,30 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@using Siimple.BUSINESS.ViewModels.Blog
+﻿
+@model UpdateBlog
+
+
+<div class="container">
+    <h1>Update Blog</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Name">
+            <span asp-validation-for="Name" style="color:red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Descritpion" class="form-label">Descritpion</label>
+            <input asp-for="Descritpion" type="text" class="form-control" placeholder="Descritpion">
+            <span asp-validation-for="Descritpion" style="color:red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Image" class="form-label">Image</label>
+            <input asp-for="Image" class="form-control" placeholder="Image">
+            <span asp-validation-for="Image" style="color:red"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
